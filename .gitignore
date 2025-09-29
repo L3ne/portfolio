@@ -4,6 +4,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+.next/
+.vercel/
 
 # Environment variables
 .env
@@ -67,3 +69,4 @@ pids
 .yarn-integrity
 
 *.rar
+*.zip

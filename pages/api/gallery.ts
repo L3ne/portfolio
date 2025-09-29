@@ -25,7 +25,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       <div class="empty-state gallery-item">
         <div class="empty-emoji">📷</div>
         <div class="empty-text">Votre galerie est vide</div>
-        <a href="/api/upload" class="api-link">📸 Uploader votre première image</a>
+        <a href="/api/uploadpage" class="api-link">upload first image</a>
       </div>
     `;
   } else {
@@ -37,7 +37,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           <div class="image-info">
             <div class="image-name">${displayName}</div>
             <button class="delete-btn" onclick="deleteImage(event, '${file}')">
-              🗑️ Supprimer
+              delete
             </button>
           </div>
         </div>
@@ -49,8 +49,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         ${imageCards}
       </div>
       <div class="gallery-actions">
-        <a href="/api/upload" class="api-link">➕ Ajouter des images</a>
-        <a href="/api" class="api-link">← Retour API</a>
+        <a href="/api/uploadpage" class="api-link">add images</a>
+        <a href="/" class="api-link">back to terminal</a>
       </div>
     `;
   }

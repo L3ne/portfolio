@@ -1,5 +1,6 @@
 {
-  "name": "portfolio-nextjs",
+  "name": "portfolio",
+  "description": "Portfolio website built with Next.js and Chakra UI",
   "version": "0.1.0",
   "private": true,
   "scripts": {

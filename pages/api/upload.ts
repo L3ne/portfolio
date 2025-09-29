@@ -19,7 +19,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   try {
-    // Créer le dossier uploads s'il n'existe pas
     const uploadDir = path.join(process.cwd(), 'public', 'uploads')
     if (!fs.existsSync(uploadDir)) {
       fs.mkdirSync(uploadDir, { recursive: true })
@@ -31,7 +30,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       keepExtensions: true,
       maxFileSize: 10 * 1024 * 1024, // 10MB
       filter: ({ mimetype }) => {
-        return mimetype && mimetype.startsWith('image/')
+        return !!(mimetype && mimetype.startsWith('image/'))
       }
     })
 
